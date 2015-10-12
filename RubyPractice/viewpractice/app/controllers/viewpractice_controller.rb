@@ -1,0 +1,2 @@
+class ViewpracticeController < ApplicationController
+end
