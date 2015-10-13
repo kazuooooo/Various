@@ -1,2 +1,0 @@
-class ViewpracticeController < ApplicationController
-end
