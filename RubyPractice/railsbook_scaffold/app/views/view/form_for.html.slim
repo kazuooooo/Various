@@ -1,7 +1,27 @@
 = form_for(@book) do |f|
-  .field
-    = f.label :isbn
-    br
-    = f.text_field :isbn, size: 25
-  .actions
-    = f.submit
+  br
+    = f.color_field :isbn
+  br
+    = f.date_field :published
+  br
+    = f.time_field :isbn
+  br
+    = f.datetime_field :published
+  br
+    = f.datetime_local_field :isbn
+  br
+    = f.month_field :isbn
+  br
+    = f.week_field :isbn
+  br
+    = f.email_field :isbn
+  br
+    = f.number_field :price
+  br
+    = f.range_field :price, min: 10, max: 2000
+  br
+    = f.search_field :isbn
+  br
+    = f.telephone_field :isbn
+  br
+    = f.url_field :isbn
