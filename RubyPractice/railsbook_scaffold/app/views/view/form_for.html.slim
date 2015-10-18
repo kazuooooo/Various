@@ -1,27 +1,7 @@
-= form_for(@book) do |f|
-  br
-    = f.color_field :isbn
-  br
-    = f.date_field :published
-  br
-    = f.time_field :isbn
-  br
-    = f.datetime_field :published
-  br
-    = f.datetime_local_field :isbn
-  br
-    = f.month_field :isbn
-  br
-    = f.week_field :isbn
-  br
-    = f.email_field :isbn
-  br
-    = f.number_field :price
-  br
-    = f.range_field :price, min: 10, max: 2000
-  br
-    = f.search_field :isbn
-  br
-    = f.telephone_field :isbn
-  br
-    = f.url_field :isbn
+= mail_to 'kazuooooosight@co.jp', 'かずおにメール', {subject: :"かずおにメール", cc: :"ai.fujita@gmail.com"}
+br
+br
+= auto_discovery_link_tag(:rss,{controller: :books,action: :index, id: :rails},title: 'test')
+
+= @current_time = capture do
+  p "ただいまの時刻は#{Time.now}です"

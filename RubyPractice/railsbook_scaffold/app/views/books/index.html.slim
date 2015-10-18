@@ -1,5 +1,6 @@
 h1
-  | Listing books
+  | Listing book
+  = debug(@books)
 table
   thead
     tr
@@ -20,10 +21,10 @@ table
       th
   tbody
     - @books.each do |book|
-      tr
-        td
-          = book.isbn
-        td
+      tr 
+        td style="background-color:#{cycle('#FFffFF', '#FFff99')}" 
+          = book.isbn 
+        td style="background-color:#{current_cycle}" 
           = book.title
         td
           = book.price

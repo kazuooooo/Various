@@ -7,6 +7,7 @@ RailsbookScaffold::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
    root 'view#form_for'
+   #root 'books#index'
 
   # Example of regular route:
      get 'formpractice' => 'view#form_for'
