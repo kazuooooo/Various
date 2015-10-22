@@ -36,12 +36,17 @@ class BooksController < ApplicationController
     respond_to do |format|
       #@model.saveで生成したオブジェクトをデータベースに保存する。結果のtrue/falseが返る
       if @book.save
+        #trueの場合
         #htmlリクエストのときは@モデルを指定することでそのモデルのshowのパスを指定したことになる??
         #notice: redirect to メソッドのオプション通知メッセージを表示
         format.html { redirect_to @book, notice: 'Book was successfully created.' }
         format.json { render action: 'show', status: :created, location: @book }
       else
+        #falseの場合
+        #失敗した&リクエストがhtmlのとき → newページを描画 
         format.html { render action: 'new' }
+        #失敗した&リクエストがjsonのとき → json形式でエラー内容を返す。
+        #statusコードはunprocessable_entity(422→処理できないエンティティ。WebDAVの拡張ステータスコード)で返す
         format.json { render json: @book.errors, status: :unprocessable_entity }
       end
     end
@@ -50,12 +55,26 @@ class BooksController < ApplicationController
   # PATCH/PUT /books/1
   # PATCH/PUT /books/1.json
   def update
+     #リクエストのformatに応じた処理を返す
     respond_to do |format|
+      #モデル.update(カラム名 = 値)でデータベースを更新するbook_papramsについてはcreateと同様.
+      #更新の成功/失敗でtrue/falseが返る
       if @book.update(book_params)
+        #成功した場合
+        #成功した&リクエストがHTMLのときは@bookに移動
+        #noticeでメッセージを表示
         format.html { redirect_to @book, notice: 'Book was successfully updated.' }
+        #成功した&リクエストがjsonの場合はhead 〜 でステータスコードのみを返すことができる。
+        #この場合はno_content(204 返すべき情報なし)が返されている
+        #参考：http://www.asahi-net.or.jp/~ax2s-kmtn/ref/status.html
         format.json { head :no_content }
       else
+        #失敗した場合
+          #リクエストがHTML
+          #editページを返す
         format.html { render action: 'edit' }
+          #リクエストがJSON
+          #JSON形式でモデル.errorsでエラーメッセージオブジェクトを返す
         format.json { render json: @book.errors, status: :unprocessable_entity }
       end
     end
