@@ -1,8 +1,10 @@
 doctype html
-= @current_time
 html
+  - current = Time.now
+  = format_datetime(current, :datetime)
+  - @books = Book.all
+  = list_tag @books, 'title'
   - concat image_tag 'wombat.jpeg',height: 200, width: 200
-  = @current = l Time.now, format: :long
   = link_to_unless_current '一覧へ',{controller: :books,action: :index}
   = favicon_link_tag 'wombat.jpeg', type: 'image/jpeg'
   head
@@ -13,3 +15,5 @@ html
     = csrf_meta_tags
   body
     = yield
+    input 
+      button id="testbutton" test

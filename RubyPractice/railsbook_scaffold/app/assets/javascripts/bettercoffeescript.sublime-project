@@ -1,0 +1,17 @@
+{
+	"folders":
+	[
+		{
+			"path": "/Users/matsumotokazuya/Desktop/GitHub/Various/RubyPractice/railsbook_scaffold"
+		}
+	],
+  "settings":
+    {
+        "CoffeeScript":
+        {
+            "noWrapper": true,
+            "compileOnSave": true,
+            "compileDir": "out"
+        }
+    }
+}

@@ -11,7 +11,7 @@
   .field
     = f.label :isbn
     br
-    = f.text_field :isbn
+    = f.text_field :isbn, id:"isbn"
   .field
     = f.label :title
     br
@@ -31,6 +31,10 @@
   .field
     = f.label :cd
     br
-    = f.check_box :cd
+    = f.check_box :cd, id: "c"
+    form
+      = f.radio_button :cd, "a", class: :rd, id:"radiobutton"
+      = f.radio_button :cd, "b", class: :rd
+      = f.radio_button :cd, "c", class: :rd
   .actions
     = f.submit
