@@ -3,6 +3,6 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $ ->
   $("#testbutton").on('click', ->
-    result = util_get_input_value($("#radiobutton"),"radiobutton")
+    result = util_get_input_value($("#dateselect"),"dateselect")
     alert "result"+result
   )

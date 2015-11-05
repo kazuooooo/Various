@@ -27,13 +27,13 @@
   .field
     = f.label :published
     br
-    = f.date_select :published
+    = f.date_select :published,id:"dateselect"
   .field
     = f.label :cd
     br
     = f.check_box :cd, id: "c"
+    = f.range_field :price, min: 10, max: 10000, id: "number"
     form
-      = f.radio_button :cd, "a", class: :rd, id:"radiobutton"
       = f.radio_button :cd, "b", class: :rd
       = f.radio_button :cd, "c", class: :rd
   .actions

@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"re",
+				"result"
+			],
+			[
+				"radi",
+				"radio_button"
+			],
+			[
+				"if",
+				"if	If"
+			],
+			[
+				"clas",
+				"className"
+			],
+			[
+				"en",
+				"element"
+			],
+			[
+				"b",
+				"b	blockquote"
+			],
+			[
+				"input",
+				"input_element"
+			],
+			[
 				"dateti",
 				"datetime"
 			],
@@ -36,61 +64,37 @@
 	"buffers":
 	[
 		{
-			"file": "/Users/matsumotokazuya/Desktop/GitHub/Various/RubyPractice/railsbook_scaffold/app/helpers/view_helper.rb",
-			"settings":
-			{
-				"buffer_size": 589,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "input_value_util",
-			"settings":
-			{
-				"buffer_size": 24,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/matsumotokazuya/Library/Application Support/Sublime Text 3/Packages/User/CoffeeScript.sublime-settings",
-			"settings":
-			{
-				"buffer_size": 2745,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "# Place all the behaviors and hooks related to the matching controller here.\n# All this logic will automatically be available in application.js.\n# You can use CoffeeScript in this file: http://coffeescript.org/\n$ ->\n  $(\"#testbutton\").on('click', ->\n    input_value_util.\n  )\n",
-			"file": "books.js.coffee",
-			"file_size": 275,
-			"file_write_time": 130907454460000000,
-			"settings":
-			{
-				"buffer_size": 276,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "view.js.coffee",
-			"settings":
-			{
-				"buffer_size": 211,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/matsumotokazuya/Desktop/GitHub/Various/RubyPractice/railsbook_scaffold/app/views/layouts/application.html.slim",
-			"settings":
-			{
-				"buffer_size": 609,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "/Users/matsumotokazuya/Desktop/GitHub/Various/RubyPractice/railsbook_scaffold/app/views/books/_form.html.slim",
 			"settings":
 			{
-				"buffer_size": 700,
+				"buffer_size": 877,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "books.js.coffee",
+			"settings":
+			{
+				"buffer_size": 345,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "@util_get_input_value = (element,type) ->\n  switch type\n    #テキストフィールド\n    when \"text\"\n      $(element).val()\n    #チェックボックス\n    when \"checkbox\"\n      $(element).prop('checked')\n    #ラジオボタン\n    when \"radiobutton\"\n      get_radio_button_val(element)\n    #日付\n    when \"dateselect\"\n      get_dateselect_val(element)\n\n    else \"others\"\n\n#ラジオボタン\nget_radio_button_val = (element) ->\n  className = $(element).attr('class')\n  radio_buttons = document.getElementsByClassName(className)\n  for radio_button in radio_buttons\n    if radio_button.checked\n      return radio_button.value\n  return \"no checked\"\n\n#datepicker\nget_dateselect_val = (element) ->\n\n\n#もう少し汎用的な書き方にする\nget_selecting_val = (datetime_element, id) ->\n  selectbox = datetime_element.querySelector(id);\n  selecting_val = selectbox.options[selectbox.selectedIndex].text;\n  return selecting_val",
+			"file": "input_value_util.js.coffee",
+			"file_size": 635,
+			"file_write_time": 130907523310000000,
+			"settings":
+			{
+				"buffer_size": 844,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/matsumotokazuya/Desktop/GitHub/Various/RubyPractice/railsbook_scaffold/app/views/books/edit.html.slim",
+			"settings":
+			{
+				"buffer_size": 121,
 				"line_ending": "Unix"
 			}
 		}
@@ -137,18 +141,12 @@
 	"expanded_folders":
 	[
 		"/Users/matsumotokazuya/Desktop/GitHub/Various/RubyPractice/railsbook_scaffold",
-		"/Users/matsumotokazuya/Desktop/GitHub/Various/RubyPractice/railsbook_scaffold/.bundle",
 		"/Users/matsumotokazuya/Desktop/GitHub/Various/RubyPractice/railsbook_scaffold/app",
 		"/Users/matsumotokazuya/Desktop/GitHub/Various/RubyPractice/railsbook_scaffold/app/assets",
-		"/Users/matsumotokazuya/Desktop/GitHub/Various/RubyPractice/railsbook_scaffold/app/assets/audios",
-		"/Users/matsumotokazuya/Desktop/GitHub/Various/RubyPractice/railsbook_scaffold/app/assets/images",
 		"/Users/matsumotokazuya/Desktop/GitHub/Various/RubyPractice/railsbook_scaffold/app/assets/javascripts",
-		"/Users/matsumotokazuya/Desktop/GitHub/Various/RubyPractice/railsbook_scaffold/app/assets/stylesheets",
+		"/Users/matsumotokazuya/Desktop/GitHub/Various/RubyPractice/railsbook_scaffold/app/assets/javascripts/out",
 		"/Users/matsumotokazuya/Desktop/GitHub/Various/RubyPractice/railsbook_scaffold/app/assets/videos",
-		"/Users/matsumotokazuya/Desktop/GitHub/Various/RubyPractice/railsbook_scaffold/app/controllers",
-		"/Users/matsumotokazuya/Desktop/GitHub/Various/RubyPractice/railsbook_scaffold/app/controllers/concerns",
-		"/Users/matsumotokazuya/Desktop/GitHub/Various/RubyPractice/railsbook_scaffold/app/helpers",
-		"/Users/matsumotokazuya/Desktop/GitHub/Various/RubyPractice/railsbook_scaffold/app/models",
+		"/Users/matsumotokazuya/Desktop/GitHub/Various/RubyPractice/railsbook_scaffold/app/mailers",
 		"/Users/matsumotokazuya/Desktop/GitHub/Various/RubyPractice/railsbook_scaffold/app/views",
 		"/Users/matsumotokazuya/Desktop/GitHub/Various/RubyPractice/railsbook_scaffold/app/views/books",
 		"/Users/matsumotokazuya/Desktop/GitHub/Various/RubyPractice/railsbook_scaffold/app/views/layouts",
@@ -156,12 +154,19 @@
 	],
 	"file_history":
 	[
+		"/Users/matsumotokazuya/.bashrc",
+		"/Users/matsumotokazuya/Desktop/GitHub/Various/RubyPractice/railsbook_scaffold/app/assets/javascripts/input_value_util.js.coffee",
+		"/Users/matsumotokazuya/Desktop/GitHub/Various/RubyPractice/railsbook_scaffold/app/views/books/_form.html.slim",
+		"/Users/matsumotokazuya/Desktop/GitHub/Various/RubyPractice/railsbook_scaffold/app/views/layouts/application.html.slim",
+		"/Users/matsumotokazuya/Desktop/GitHub/Various/RubyPractice/railsbook_scaffold/app/assets/javascripts/bettercoffeescript.sublime-project",
+		"/Users/matsumotokazuya/Desktop/GitHub/Various/RubyPractice/railsbook_scaffold/app/assets/javascripts/view.js.coffee",
+		"/Users/matsumotokazuya/Desktop/GitHub/Various/RubyPractice/railsbook_scaffold/app/helpers/view_helper.rb",
+		"/Users/matsumotokazuya/Library/Application Support/Sublime Text 3/Packages/User/CoffeeScript.sublime-settings",
+		"/Users/matsumotokazuya/Desktop/GitHub/Various/RubyPractice/railsbook_scaffold/app/assets/javascripts/books.js.coffee",
 		"/Users/matsumotokazuya/Desktop/GitHub/Various/RubyPractice/railsbook_scaffold/app/assets/javascripts/input_value_util",
 		"/Users/matsumotokazuya/Desktop/GitHub/Various/RubyPractice/railsbook_scaffold/app/views/view/form_for.html.slim",
 		"/Users/matsumotokazuya/Desktop/GitHub/Various/RubyPractice/railsbook_scaffold/app/controllers/view_controller.rb",
-		"/Users/matsumotokazuya/Desktop/GitHub/Various/RubyPractice/railsbook_scaffold/app/views/layouts/application.html.slim",
 		"/Users/matsumotokazuya/Desktop/GitHub/Various/RubyPractice/railsbook_scaffold/app/controllers/books_controller.rb",
-		"/Users/matsumotokazuya/Desktop/GitHub/Various/RubyPractice/railsbook_scaffold/app/helpers/view_helper.rb",
 		"/Users/matsumotokazuya/Desktop/GitHub/Various/RubyPractice/railsbook_scaffold/app/views/books/index.html.slim",
 		"/Users/matsumotokazuya/Desktop/wombat.jpeg",
 		"/Users/matsumotokazuya/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
@@ -208,7 +213,7 @@
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -226,6 +231,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"date_select",
+			"radiobutton",
+			"rudiobutton",
 			"truncate",
 			"br",
 			"telephone_field"
@@ -247,140 +255,82 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/Users/matsumotokazuya/Desktop/GitHub/Various/RubyPractice/railsbook_scaffold/app/helpers/view_helper.rb",
+					"file": "/Users/matsumotokazuya/Desktop/GitHub/Various/RubyPractice/railsbook_scaffold/app/views/books/_form.html.slim",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 589,
+						"buffer_size": 877,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								467,
-								467
+								611,
+								611
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "input_value_util",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 24,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 20.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "/Users/matsumotokazuya/Library/Application Support/Sublime Text 3/Packages/User/CoffeeScript.sublime-settings",
+					"buffer": 1,
+					"file": "books.js.coffee",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2745,
+						"buffer_size": 345,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2745,
-								2745
+								312,
+								312
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage"
 						},
-						"translation.x": -0.0,
-						"translation.y": 630.0,
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "books.js.coffee",
+					"buffer": 2,
+					"file": "input_value_util.js.coffee",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 276,
+						"buffer_size": 844,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								271,
-								271
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "view.js.coffee",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 211,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								211,
-								211
+								641,
+								641
 							]
 						],
 						"settings":
@@ -395,63 +345,31 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "/Users/matsumotokazuya/Desktop/GitHub/Various/RubyPractice/railsbook_scaffold/app/views/layouts/application.html.slim",
-					"semi_transient": false,
+					"buffer": 3,
+					"file": "/Users/matsumotokazuya/Desktop/GitHub/Various/RubyPractice/railsbook_scaffold/app/views/books/edit.html.slim",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 609,
+						"buffer_size": 121,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								563,
-								563
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "/Users/matsumotokazuya/Desktop/GitHub/Various/RubyPractice/railsbook_scaffold/app/views/books/_form.html.slim",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 700,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								672,
-								672
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -534,7 +452,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 240.0,
+	"side_bar_width": 279.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

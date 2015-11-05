@@ -9,6 +9,10 @@
     #ラジオボタン
     when "radiobutton"
       get_radio_button_val(element)
+    #日付
+    when "dateselect"
+      get_dateselect_val(element)
+
     else "others"
 
 get_radio_button_val = (element) ->
